@@ -119,6 +119,46 @@
           }
         }
       }
+    },
+    "wukong-range-datepicker": {
+      "projectType": "library",
+      "root": "projects/wukong-range-datepicker",
+      "sourceRoot": "projects/wukong-range-datepicker/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/wukong-range-datepicker/tsconfig.lib.json",
+            "project": "projects/wukong-range-datepicker/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/wukong-range-datepicker/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/wukong-range-datepicker/src/test.ts",
+            "tsConfig": "projects/wukong-range-datepicker/tsconfig.spec.json",
+            "karmaConfig": "projects/wukong-range-datepicker/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/wukong-range-datepicker/tsconfig.lib.json",
+              "projects/wukong-range-datepicker/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "wukong-component"
 }

@@ -1,0 +1,85 @@
+<div class="gf-timepicker-nav self-component clearfix" style="position: relative;">
+    <div class="navbar-buttons pull-right">
+        <!-- 左侧  -->
+        <button class="btn navbar-button navbar-button--tight" *ngIf="(!fromIsRelativeTime && !toIsRelativeTime)" (click)="removeRightHandle()">
+      <i class="icon icon-arrow-left"></i>
+    </button>
+        <!-- 显示信息区域 -->
+    <button class="btn navbar-button gf-timepicker-nav-btn dropdown-text" (click)="timebarShowClick($event)" (mouseout)="updateToolTipTime()" #timeBarRef>
+      <span style="font-weight: 400;">{{clockBoard}}</span>
+      <span *ngIf="(toIsRelativeTime || fromIsRelativeTime) && isRunning" class="text-warning ml10">{{refreshBoard}}</span>
+      <div *ngIf="toIsRelativeTime || fromIsRelativeTime" class="bubble-wrap bubble-text pad-5">
+        <span>{{fromLongTime+' '}}{{localeOpts.toText}}{{' '+toLongTime}}</span>
+        <div class="bubble-triangle top center"></div>
+      </div>
+    </button>
+      <!-- 右侧 -->
+    <button class="btn navbar-button navbar-button--tight" *ngIf="(!fromIsRelativeTime && !toIsRelativeTime)" (click)="removeLeftHandle()">
+      <i class="icon icon-arrow-right"></i>
+    </button>
+        <!-- zoom -->
+    <button class="btn navbar-button navbar-button--zoom" (click)="zoomHandle()">
+      <i class="icon date-search"></i>
+      <div class="bubble-wrap bubble-text pad-5">
+        <span>{{localeOpts.zoomTooltipMsg}}</span>
+        <div class="bubble-triangle top center"></div>
+      </div>
+    </button>
+        <!-- refresh -->
+    <div style="display: flex; position: relative;">
+      <button class="btn navbar-button navbar-button--refresh" (click)="resetRefreshImmediatelyController()">
+        <i class="icon date-refresh"></i>
+        <div class="bubble-wrap bubble-text pad-5">
+          <span>{{localeOpts.refreshTooltipMsg}}</span>
+          <div class="bubble-triangle top center"></div>
+        </div>
+      </button>
+      <div class="dropdown-default dropdown-default-bor" (click)="clickRefreshSetting()" #refreshRef>
+        <p class="dropdown-text active"><span>{{localeOpts.refreshValueOptions[activeTimerIndex].key}}</span></p>
+        <em class="dropdown-arrow-down"></em>
+        <div class="dropdown-wrap" [ngStyle]="{'display' : refreshSetting ? 'block': 'none'}">
+            <ul class="dropdown-list scroll-default" style="position: relative; overflow: visible;">
+                <li *ngFor="let item of localeOpts.refreshValueOptions; let i = index" title="item.key" [ngClass]="{'active': i === activeTimerIndex}" (click)="switchTimer(i,item)">{{item.key}} </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div cdk-overlay-origin #trigger="cdkOverlayOrigin" [ngStyle]="{display: OpenTimeBar ? 'flex' : 'none', 'z-index': 10000}" class="gf-timepicker-dropdown" (click)="datepickerBox($event)">
+        <form class="gf-timepicker-absolute-section">
+            <h3 class="section-heading">{{localeOpts.customRangeTitle}}</h3>
+            <label class="small">{{localeOpts.fromText}}:</label>
+            <my-date-picker name="fromDate" [updateSelectDate]="fromUpdateRelativeSelectTime" [options]="myFromDatePickerOptions" [(ngModel)]="fromTimeTxt" [locale]="locale" [startOrEnd]="'from'" (dateChanged)="fromDatepickerChanged($event)" (inputFieldChanged)="fromDatepickerChanged($event)"
+                required></my-date-picker>
+            <label class="small mt10">{{localeOpts.toText}}:</label>
+            <my-date-picker name="toDate" [updateSelectDate]="toUpdateRelativeSelectTime" [options]="myToDatePickerOptions" [(ngModel)]="toTimeTxt" [locale]="locale" [startOrEnd]="'to'" (dateChanged)="toDatepickerChanged($event)" (inputFieldChanged)="toDatepickerChanged($event)"
+                required></my-date-picker>
+            <label class="small mt40"></label>
+            <div class="dp-form-inline">
+                <div class="dp-form">
+                    <button type="submit" (click)="applySubmitHandle()"  [ngClass]="{'mb-type-primary-disable': fromInvalid || toInvalid}" class="mb-type mb-type-sm mb-type-primary pull-right">{{localeOpts.apply}}</button>
+                </div>
+            </div>
+        </form>
+        <div class="datepicker-relative-section">
+            <h3 class="section-heading">{{localeOpts.quickRangesTitle}}</h3>
+            <ul *ngFor="let relTimes of localeOpts.timeLocaleOptions; let i = index">
+                <li *ngFor="let item of relTimes; let k = index" [ngClass]="{'active': activeList[i][k]}">
+                    <a (click)="relativeChooseClick($event, i, k)">{{item}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mydp-line">
+            <span class="mydp-or">or</span>
+        </div>
+    </div>
+</div>
+
+
+<ng-template cdk-connected-overlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayWidth]="500"
+  cdkConnectedOverlayHasBackdrop
+  [cdkConnectedOverlayOpen]="OpenTimeBar"
+  (backdropClick)="OpenTimeBar=false">
+</ng-template>

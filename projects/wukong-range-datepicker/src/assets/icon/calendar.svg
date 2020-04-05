@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="15px" viewBox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>时间</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="筛选框/输入框" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-454.000000, -945.000000)" fill="#FFFFFF" fill-rule="nonzero" id="时间">
+            <g transform="translate(454.000000, 945.000000)">
+                <path d="M3.5,3 C3.224,3 3,2.776 3,2.5 L3,0.5 C3,0.224 3.224,0 3.5,0 C3.776,0 4,0.224 4,0.5 L4,2.5 C4,2.776 3.776,3 3.5,3 Z" id="Fill-1"></path>
+                <path d="M12.5,3 C12.224,3 12,2.776 12,2.5 L12,0.5 C12,0.224 12.224,0 12.5,0 C12.776,0 13,0.224 13,0.5 L13,2.5 C13,2.776 12.776,3 12.5,3" id="Fill-3"></path>
+                <polygon id="Fill-11" points="1 5 15 5 15 4 1 4"></polygon>
+                <polygon id="Fill-11-Copy" points="3 8 5 8 5 7 3 7"></polygon>
+                <polygon id="Fill-11-Copy-3" points="3 10 5 10 5 9 3 9"></polygon>
+                <polygon id="Fill-11-Copy-7" points="3 12 5 12 5 11 3 11"></polygon>
+                <polygon id="Fill-11-Copy-2" points="7 8 9 8 9 7 7 7"></polygon>
+                <polygon id="Fill-11-Copy-5" points="11 8 13 8 13 7 11 7"></polygon>
+                <polygon id="Fill-11-Copy-4" points="7 10 9 10 9 9 7 9"></polygon>
+                <polygon id="Fill-11-Copy-8" points="7 12 9 12 9 11 7 11"></polygon>
+                <polygon id="Fill-11-Copy-6" points="11 10 13 10 13 9 11 9"></polygon>
+                <polygon id="Fill-11-Copy-9" points="11 12 13 12 13 11 11 11"></polygon>
+                <path d="M14,1 L2,1 C0.896,1 0,1.896 0,3 L0,13 C0,14.104 0.896,15 2,15 L14,15 C15.104,15 16,14.104 16,13 L16,3 C16,1.896 15.104,1 14,1 M14,2 C14.551,2 15,2.449 15,3 L15,13 C15,13.551 14.551,14 14,14 L2,14 C1.449,14 1,13.551 1,13 L1,3 C1,2.449 1.449,2 2,2 L14,2" id="Fill-9"></path>
+            </g>
+        </g>
+    </g>
+</svg>

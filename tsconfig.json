@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "wukong-range-datepicker": [
+        "dist/wukong-range-datepicker/wukong-range-datepicker",
+        "dist/wukong-range-datepicker"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
