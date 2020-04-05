@@ -1,0 +1,67 @@
+.gf-timepicker-dropdown{
+  color: rgba(41,42,45,.65) !important;
+  background:#fff !important;
+}
+.section-heading {
+  color: rgba(41, 42, 45, 1) !important;
+}
+.mydp-line {
+  background: rgba(41,42,45,.2) !important;
+}
+.mydp-or {
+  color: #fff !important;
+  background: #D4D4D5 !important;
+}
+.datepicker-relative-section ul li a:hover {
+  color: rgb(41,42,45) !important;
+}
+.mydp .apm-calendar-icon {
+  background: url(./icon/calendar-gray.svg) no-repeat center !important;
+}
+.mydp .apm-calendar-icon:hover {
+  background: url(./icon/calendar-blue.svg) no-repeat center !important;
+}
+.mydp .selectorarrow {
+  background: #fff !important;
+}
+.mydp .yeartable .yearchangebtncell, .mydp .monthtable tbody tr, .mydp .header tbody, .mydp .caltable thead, .mydp .caltable tbody {
+  background: #fff !important;
+}
+.mydp .headerbtncell {
+  background-color: #fff !important;
+}
+.mydp .headerbtn, .mydp .headerlabelbtn, .mydp .yearchangebtn {
+  background: #fff !important;
+  color: rgba(41, 42, 45, 1) !important;
+}
+.mydp .caltable, .mydp .monthtable, .mydp .yeartable, .mydp .weekdaytitle, .mydp .daycell, .mydp .monthcell, .mydp .yearcell {
+  color: rgba(41, 42, 45, 0.3) !important;
+}
+.mydp .currmonth {
+  color: rgba(41, 42, 45, 1) !important;
+}
+.mydp .icon-mydpleft:before,.mydp .icon-mydpright:before {
+  background-image: url(./icon/icon-arrow-gray.svg) !important;
+  background-size: contain !important;
+  opacity:.6 !important;
+}
+.mydp .icon-mydpright:before {
+  transform:rotate(180deg) !important;
+  background-position:center !important;
+}
+.mydp .icon-mydpleft:hover:before,.mydp .icon-mydpright:hover:before{
+  background-image: url(./icon/icon-arrow-blue.svg) !important;
+  opacity:1 !important;
+}
+.mydp .monthcell ,.mydp .yearcell{
+  background-color: #fff !important;
+}
+.mydp .monthtable .monthcell ,.mydp .yeartable .yearcell{
+  color: rgb(41,42,45) !important;
+}
+.mydp .selectedmonth .monthvalue,.mydp .selectedyear .yearvalue,.mydp .selectedday {
+  background: rgba(41,42,45,.1) !important;
+}
+.mydp .invaliddate{
+  color:#fff !important;
+}

@@ -570,7 +570,7 @@
 
 /* 123 */
 
-.gf-timepicker-dropdown{
+/* .gf-timepicker-dropdown{
   color: rgba(41,42,45,.65) !important;
   background:#fff !important;
 }
@@ -588,10 +588,10 @@
   color: rgb(41,42,45) !important;
 }
 .mydp .apm-calendar-icon {
-  background: url(../images/calendar-gray.svg) no-repeat center !important;
+  background: url(../assets/icon/calendar-gray.svg) no-repeat center !important;
 }
 .mydp .apm-calendar-icon:hover {
-  background: url(../images/calendar-blue.svg) no-repeat center !important;
+  background: url(../assets/icon/calendar-blue.svg) no-repeat center !important;
 }
 .mydp .selectorarrow {
   background: #fff !important;
@@ -636,4 +636,4 @@
 }
 .mydp .invaliddate{
   color:#fff !important;
-}
+} */

@@ -4,7 +4,7 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { MyDatePickerModule } from '../component/datepicker/my-date-picker.module';
+import { MyDatePickerModule } from '../datepicker/my-date-picker.module';
 // import { NzSelectModule } from '../select/nz-select.module';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { WukongRangeDatepickerComponent } from './wukong-range-datepicker.component';

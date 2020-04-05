@@ -30,7 +30,7 @@ enum Year {min = 1970, max = moment().year()};
 @Component({
   selector: 'wukong-range-date-picker',
   exportAs: "wukongrangedatepicker",
-  styleUrls: [`wukong-range-datepicker.component.css`],
+  styleUrls: [`wukong-range-datepicker.component.css`, `../assets/light.css`],
   templateUrl: 'wukong-range-datepicker.component.html',
   providers: [UtilService, WukongRangeDatepickerService],
   encapsulation: ViewEncapsulation.None
